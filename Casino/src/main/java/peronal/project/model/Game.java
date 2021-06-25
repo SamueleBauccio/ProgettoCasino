@@ -1,0 +1,24 @@
+package peronal.project.model;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import lombok.Data;
+
+@Entity
+@Table
+@Data
+public class Game {
+
+	@Id
+	@GeneratedValue(generator = "id_game", strategy = GenerationType.IDENTITY)
+	private Long id;
+
+	private double minBet;
+	private double maxBet;
+	private int maxNumberOfPlayers;
+
+}
